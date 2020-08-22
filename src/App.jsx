@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import Header from "./Header.jsx"
 import Footer from "./Footer.jsx"
 import Note from "./Note.jsx"
-import Card from "./Card.jsx"
-
+import Card1 from "./Card.jsx"
+import notes from "./Content.jsx"
 
 
 var change = true ;
+
+function createNotes(x){
+    return <Note key ={x.key} title={x.title} content={x.content} />;}
 
 function App() {
     
@@ -35,7 +38,7 @@ function App() {
         ccolor(color);
     }
     function handleMouseout(){
-        color = "black";
+        color = "red";
         ccolor(color);
     }
     return (
@@ -43,17 +46,21 @@ function App() {
     <div className= "keeper">
         <Header />
         
-        <Note />
+
+       {notes.map(createNotes)}
+
         
+        
+   
         
         <button style={{backgroundColor:color}}onClick={updateMotivation}onMouseOut={handleMouseout} onMouseOver={handleMouseover}>SWITCH MOTIVATION</button>
     </div>
     
 
     {state ? <div className = "motivation">
-        <Card name =""  url = "https://picsum.photos/id/235/400/300" />
-        <Card name = ""  url = "https://picsum.photos/id/230/400/300" />
-        <Card name = ""  url = "https://picsum.photos/id/266/400/300" />
+        <Card1 name =""  url = "https://picsum.photos/id/235/400/300" />
+        <Card1 name = ""  url = "https://picsum.photos/id/230/400/300" />
+        <Card1 name = ""  url = "https://picsum.photos/id/266/400/300" />
     </div> : null}
     </div>
     

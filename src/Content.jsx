@@ -25,6 +25,5 @@ const notes = [
     }
   ];
 
-  notes.map(function(x){
-      console.log(x.title)
-  })
+  export default notes;
+  

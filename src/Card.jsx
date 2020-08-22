@@ -1,9 +1,9 @@
 import React from "react";
+import ReactDom from "react-dom";
 
-
-function Card(prop) {
+function Card1(prop) {
     return(
-    <card>
+    
         <div className = "card">
             <div className="top">
                 <p>{prop.name}</p>
@@ -12,8 +12,8 @@ function Card(prop) {
                 <img src = {prop.url} alt ="well...sorry" />
             </div>
         </div>
-    </card>
+    
     )
 };
 
-export default Card;
+export default Card1;
